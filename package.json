@@ -1,0 +1,23 @@
+{
+  "name": "ejs-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jonne Kaajalahti",
+  "license": "ISC",
+  "engines": {
+    "node": "10.x"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^2.7.4",
+    "express": "^4.17.1",
+    "lodash": "^4.17.15",
+    "mongodb": "^3.5.9",
+    "mongoose": "^5.9.18"
+  }
+}
