@@ -32,11 +32,13 @@ const app = express();
 
 app.set('view engine', 'ejs');
 
+app.use(express.static("public"));
+
 app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-app.use(express.static("public"));
+
 
 app.use(favicon(__dirname + '/public/images/favicon.ico'));
 // favicon made buy "https://www.flaticon.com/authors/pixel-perfect" from "https://www.flaticon.com/"
