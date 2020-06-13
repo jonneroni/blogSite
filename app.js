@@ -5,6 +5,9 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const _ = require("lodash");
 const mongoose = require("mongoose");
+const favicon = require('serve-favicon');
+
+
 require('dotenv').config();
 
 const homeStartingContent = "Welcome to my Blog website! <br><br>You can add a new post by adding '/compose' to the end of the URL!";
@@ -32,7 +35,11 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({
   extended: true
 }));
+
 app.use(express.static("public"));
+
+app.use(favicon(__dirname + '/public/images/favicon.ico'));
+// favicon made buy "https://www.flaticon.com/authors/pixel-perfect" from "https://www.flaticon.com/"
 
 app.get("/", (req, res) => {
 
@@ -101,3 +108,7 @@ if (port == null || port == "") {
 app.listen(port, function () {
   console.log("Server started succesfully.");
 });
+
+
+
+// Icons made by <a href="https://www.flaticon.com/authors/nhor-phai" title="Nhor Phai">Nhor Phai</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
