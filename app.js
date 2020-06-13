@@ -30,6 +30,9 @@ const Post = mongoose.model("Post", postSchema);
 
 const app = express();
 
+app.use(favicon(__dirname + '/public/images/favicon.ico'));
+// favicon made buy "https://www.flaticon.com/authors/pixel-perfect" from "https://www.flaticon.com/"
+
 app.set('view engine', 'ejs');
 
 app.use(express.static("public"));
@@ -39,9 +42,6 @@ app.use(bodyParser.urlencoded({
 }));
 
 
-
-app.use(favicon(__dirname + '/public/images/favicon.ico'));
-// favicon made buy "https://www.flaticon.com/authors/pixel-perfect" from "https://www.flaticon.com/"
 
 app.get("/", (req, res) => {
 
@@ -110,7 +110,3 @@ if (port == null || port == "") {
 app.listen(port, function () {
   console.log("Server started succesfully.");
 });
-
-
-
-// Icons made by <a href="https://www.flaticon.com/authors/nhor-phai" title="Nhor Phai">Nhor Phai</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
